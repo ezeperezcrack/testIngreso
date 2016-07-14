@@ -40,23 +40,34 @@ function CalcularPrecio ()
  			break;
  			case "FelipeLamparas":
  				if (cant==4) {
- 					descuento=0.80;
- 				};else if (cant==3) {
+ 					descuento=0.75;
+ 				}else 
+ 					if (cant==3) {
  					descuento=0.90;
- 				};
+ 					} else
+ 						if (cant==5) {
+ 							descuento=0.70;
+ 					}
  			break;
  			default:
  				if (cant==3) {
  				descuento=0.95;
- 				}
+ 				} else 
+ 						if (cant==4) {
+ 							descuento=0.80;
+ 						} else
+ 							if (cant==5) {
+ 								descuento=0.70;
+ 							}
  	 	}//switch
  	 		if (cant>=6) {
  			descuento=0.50;
 			}
  precioNeto=precioBruto*descuento;
+document.getElementById('precioDescuento').value=precioNeto;
 	if (precioNeto>=120) {
-		precioFinal=precioNeto*0.1;
+		precioFinal=parseInt(precioNeto)+precioNeto*0.1;
 		alert("IIBB usted pago "+precioFinal);
 	}
-document.getElementById('precioDescuento').value=precioNeto;
+
 }//funcion
