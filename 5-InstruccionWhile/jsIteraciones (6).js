@@ -3,22 +3,28 @@ function Mostrar()
 
 	var contador=1;
 	var acumulador=0;
-	var suma
+	var suma=0;
 		/*while(){
 			;
 			
 			;
 		} */
-	while(true) {
-		
-				if (contador<6 && contador>0) {
+		while(true) 
+		{	
+			
+				if (contador<6 && contador>0) 
+				{
 					acumulador=prompt("ingrese numero");
-				}
-				suma=suma+ parseInt(acumulador);	
-				contador=contador+1;
-}
+					contador=contador+1;
+					suma=parseInt(suma)+parseInt(acumulador);
+				}	else 
+					{
+						document.getElementById('suma').value=suma;
+						document.getElementById('promedio').value=suma/5;
+						break;	
+					}
+			
+		}
 
-document.getElementById('suma').value=suma;
-document.getElementById('promedio').value=suma/5;
 
 }//FIN DE LA FUNCIÓN

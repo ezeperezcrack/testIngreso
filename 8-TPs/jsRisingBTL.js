@@ -40,7 +40,7 @@ function ComenzarIngreso ()
 				switch(estCivil)
 				{
 					case "1":
-					document.getElementById('EstadoCivil').value="Soltero";break;
+					document.getElementById('EstadoCivil').value="Soltero";
 					break;
 					case "2":
 					document.getElementById('EstadoCivil').value="Casado";
