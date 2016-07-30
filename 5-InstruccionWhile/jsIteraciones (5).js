@@ -1,17 +1,12 @@
 function Mostrar()
 {
 
-var sexo
-	while(true)
+var sexo=prompt("ingrese su sexo F ó M");
+
+	while(sexo!="F" && sexo!="M" && sexo!="f" && sexo!="m")
 	{
 		sexo=prompt("ingrese su sexo F ó M");
-			if (sexo=="F" || sexo=="M" || sexo=="f" || sexo=="m") 
-			{
-				document.getElementById('Sexo').value= sexo;
-				break;
-			}	else 
-				{
-					alert("no ingreso un sexo valido");
-				}
+		
 	}
+	document.getElementById('Sexo').value= sexo;
 	}//FIN DE LA FUNCIÓN

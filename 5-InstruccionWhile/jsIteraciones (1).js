@@ -1,7 +1,7 @@
 function Mostrar()
 {
 	var varN = 1;
-		while(true)
+	/*	while(true)
 	{
 		varN=varN+1;
 			if(varN==3)
@@ -15,13 +15,14 @@ function Mostrar()
 				
 			}alert("fin"+varN);
 			
-	}
+	}*/
 
 
-		/*while(varN<11 && varN>0){
+		while(varN<11 && varN>0)
+		{
 			alert(varN);
 			varN=varN +1;
-		}*/
+		}
 	/*
 		while(true) {
 			alert("El numero es " + varN);
