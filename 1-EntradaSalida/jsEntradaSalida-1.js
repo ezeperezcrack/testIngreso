@@ -9,10 +9,10 @@ var nombre;
 var edad;
 var sexo;
 var nota;
-var promedio;
-var promVa;
+var promedio=0;
+var promVa=0;
 var contVa=0;
-var promMu;
+var promMu=0;
 var contMu=0;
 var min;
 var max;
@@ -26,7 +26,7 @@ var muMa=0;
 		contador++;
 		nombre=prompt("ingrese su nombre");
 		edad=prompt("ingrese su edad");
-			while(edad<1 || edad>100)
+			while(isNaN(edad) || edad<1 || edad>100)
 			{
 				edad=prompt("Ingrese edad valida");
 			}
@@ -63,27 +63,40 @@ var muMa=0;
 			{
 				min=edad;
 				max=nota;
+				maxNom=nombre
 			} 	else
 				{
 					if (edad<min) 
 					{
 						min=edad;
 					}
-					if (nota>max) 
+				}
+			if (nota>max) 
 					{
 						max=nota;
 						maxNom=nombre;
-					}
-				}
+					}	
+				
 	respuesta=prompt("desea seguir ingresando datos? Responda si o no");			
 	}
 alert("datos ingresados " + contador);
 alert("Hombres mayores de edad " +hombMa);
 alert("mujeres mayores con nota mayor a 5 " + muMa);
 alert("promedio de todas las notas" + Math.floor(promedio/contador));
-alert("promedio de edad de varones " + Math.floor(promVa/contVa));
-alert("promedio de edad de mujeres " + Math.floor(promMu/contMu));
+	if (contVa==0) 
+	{
+		alert("promedio de edad de varones es 0");
+	}	else
+		{
+		alert("promedio de edad de varones " + Math.floor(promVa/contVa));
+		}
+	if (contMu==0) 
+	{
+		alert("promedio de edad de mujeres es 0");
+	} 	else
+		{
+			alert("promedio de edad de mujeres " + Math.floor(promMu/contMu));
+		}
 alert("la edad minima " + min);
-alert(maxNom + " obtuvo la mejor nota y fue" + max);
-
+alert("la mejor nota la tuvo "+maxNom+" y fue" + max);
 }
